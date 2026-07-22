@@ -1,0 +1,42 @@
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/header') %>
+
+  <%- include('partials/page-banner', {
+    pageTitle: 'College',
+    breadcrumb: [
+      { label: 'About HEI', url: '/about-hei' },
+      { label: 'College', url: '' }
+    ]
+  }) %>
+
+  <main class="main-content">
+    <div class="container-fluid px-3 px-md-5 py-5 college-content">
+      <h2 class="college-heading">COLLEGE</h2>
+      <div class="college-underline"></div>
+
+      <p class="college-para">
+        Sri Sivani College of Pharmacy was established in the year 2007 under the visionary management of Sri Sivani Educational Society, led by highly motivated and philanthropic individuals with a vision for meticulous planning and commitment to the upliftment of professional education in rural areas of Srikakulam district, Andhra Pradesh. The college is situated in the Eastern Ghats of Andhra Pradesh with a serene, beautiful atmosphere near NH-16, making it easily accessible by bus and local transport from Srikakulam town. The campus is spread across 2.56 acres of pollution-free, picturesque, lush green surroundings, creating the right ambiance and conducive environment for quality education and research.
+      </p>
+
+      <p class="college-para">
+        The college building is spacious and constructed as per All India Council for Technical Education (AICTE) norms and specifications and the Pharmacy Council Of India (PCI), New Delhi.
+      </p>
+
+      <p class="college-para">
+        The college offers B.Pharmacy in UG and M.Pharmacy (PG) with three Specializations of Pharmaceutics, Pharmaceutical Analysis, and Pharmaceutical Regulatory Affairs. All India Council for Technical Education (AICTE), the Pharmacy Council of India (PCI) in New Delhi, and the Government of Andhra Pradesh recognize and approve these courses.
+      </p>
+      <p>
+        The institute's infrastructure includes well-equipped laboratories, a well-stocked library, spacious lecture halls, separate hostels for boys and girls, a hygienic canteen, a generous playground, payphones, computer labs, and language labs. These amenities collectively create an environment conducive to academic learning, offering students quality education in a clean and comfortable setting. 
+      </p>
+      <p>
+        We are proud to feel that our product has achieved glorious, outstanding results in both the on-campus and off-campus selections and is in highly competitive positions.
+      </p>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

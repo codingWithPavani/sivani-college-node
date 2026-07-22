@@ -1,0 +1,26 @@
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/header') %>
+
+  <%- include('partials/page-banner', {
+    pageTitle: pageTitle,
+    breadcrumb: [
+      { label: 'About HEI', url: '/about-hei' },
+      { label: pageTitle, url: '' }
+    ]
+  }) %>
+
+  <main class="main-content">
+    <div class="container-fluid px-3 px-md-5 py-5 college-content">
+      <h2 class="college-heading"><%= pageTitle.toUpperCase() %></h2>
+      <div class="college-underline"></div>
+
+      <%- content %>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

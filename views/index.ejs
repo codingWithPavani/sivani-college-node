@@ -1,0 +1,223 @@
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/header') %>
+  <!-- Main Showcase Area -->
+  <main class="main-content">
+    <div class="container-fluid px-0 px-md-3">
+      <!-- Carousel Outer Black Frame -->
+      <div class="carousel-outer-frame">
+        <!-- Bootstrap Carousel Component -->
+        <div id="collegeEventCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="carousel-inner-content">
+                <img src="/assets/event_slide.svg" class="carousel-slide-image" alt="College Event - Day 2k26 Inauguration & Stage Celebration" id="slide-img-1">
+              </div>
+            </div>
+            <!-- Slide 2 (Duplicate for sliding action) -->
+            <div class="carousel-item">
+              <div class="carousel-inner-content">
+                <img src="/assets/event_slide.svg" class="carousel-slide-image" style="transform: scaleX(-1);" alt="College Event - Day 2k26 Celebrations Alternate View" id="slide-img-2">
+              </div>
+            </div>
+          </div>
+          <!-- Custom Left Control -->
+          <button class="carousel-control-prev-custom" type="button" data-bs-target="#collegeEventCarousel" data-bs-slide="prev" id="carousel-prev-btn" aria-label="Previous Slide">
+            <span class="control-arrow-char" aria-hidden="true">&lt;</span>
+          </button>
+          
+          <!-- Custom Right Control -->
+          <button class="carousel-control-next-custom" type="button" data-bs-target="#collegeEventCarousel" data-bs-slide="next" id="carousel-next-btn" aria-label="Next Slide">
+            <span class="control-arrow-char" aria-hidden="true">&gt;</span>
+          </button>
+        </div>
+        <!-- Static Bottom Text Label of Carousel -->
+        <div class="carousel-bottom-bar" id="carousel-caption-bar">
+          Day 2k26
+        </div>
+      </div>
+    </div>
+          <!-- About & Campus Section -->
+      <div class="about-campus-section mt-4">
+        <div class="row g-0 align-items-stretch">
+          <!-- Left Column: About & Mission -->
+          <div class="col-12 col-md-6 bg-white about-column">
+            <div>
+              <h2 class="about-heading" id="about-heading-title">ABOUT SRI SIVANI COLLEGE OF PHARMACY</h2>
+              <div class="about-underline"></div>
+              
+              <h3 class="about-subheading" id="about-subheading-mission">Mission</h3>
+              
+              <ul class="about-list" id="about-mission-list">
+                <li class="about-list-item">
+                  <span class="item-num">1.</span>
+                  To make pharmacy education more accessible to all the rural communities.
+                </li>
+                <li class="about-list-item">
+                  <span class="item-num">2.</span>
+                  To promote healthcare partnerships and industry programs and fulfill the requirements of industries.
+                </li>
+                <li class="about-list-item">
+                  <span class="item-num">3.</span>
+                  To promote and disseminate pharmaceutical knowledge through quality teaching and research to improve the health of everyone.
+                </li>
+                <li class="about-list-item">
+                  <span class="item-num">4.</span>
+                  To execute our mission, we employ creative and established educational methods to produce pharmacists with the skills and knowledge to serve society ethically and professionally.
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Indicators / Tab Bars representing Mission (third active) -->
+            <div class="about-tab-indicators" id="about-tab-indicators">
+              <span class="about-tab-bar"></span>
+              <span class="about-tab-bar"></span>
+              <span class="about-tab-bar active"></span>
+            </div>
+          </div>
+          
+          <!-- Right Column: Campus Laboratory Carousel -->
+          <div class="col-12 col-md-6 campus-column">
+            <div id="campusBlockCarousel" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="4000">
+              <div class="carousel-inner campus-carousel-inner h-100">
+                <!-- Slide 1 -->
+                <div class="carousel-item campus-carousel-item active h-100">
+                  <img src="/assets/lab_block.svg" class="campus-slide-image" alt="Main Academic Block - Pharmacy Lab" id="campus-slide-img-1">
+                  <div class="campus-carousel-caption" id="campus-caption-text">
+                    Main Academic Block
+                  </div>
+                </div>
+                <!-- Slide 2 (Duplicate for transition) -->
+                <div class="carousel-item campus-carousel-item h-100">
+                  <img src="/assets/lab_block.svg" class="campus-slide-image" style="transform: scaleX(-1);" alt="Main Academic Block - Lab View 2" id="campus-slide-img-2">
+                  <div class="campus-carousel-caption">
+                    Central Laboratory
+                  </div>
+                </div>
+              </div>
+
+              <!-- Custom indicators inside the image frame -->
+              <div class="campus-indicators" id="campus-indicators">
+                <button type="button" data-bs-target="#campusBlockCarousel" data-bs-slide-to="0" class="campus-indicator-dot active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#campusBlockCarousel" data-bs-slide-to="1" class="campus-indicator-dot" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#campusBlockCarousel" data-bs-slide-to="2" class="campus-indicator-dot" aria-label="Slide 3"></button>
+              </div>
+
+              <!-- Controls -->
+              <button class="campus-control-prev" type="button" data-bs-target="#campusBlockCarousel" data-bs-slide="prev" aria-label="Previous Slide">
+                <span aria-hidden="true">&lt;</span>
+              </button>
+              <button class="campus-control-next" type="button" data-bs-target="#campusBlockCarousel" data-bs-slide="next" aria-label="Next Slide">
+                <span aria-hidden="true">&gt;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+            <!-- Principal's Message Section -->
+      <div class="principal-message-section mt-4" id="principal-section">
+        <div class="row align-items-center">
+          <!-- Left Column: Principal Image -->
+          <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+            <div class="principal-img-container">
+              <img src="assets/principal.svg" alt="Principal of Sri Sivani College of Pharmacy" class="principal-img img-fluid" id="principal-img">
+            </div>
+          </div>
+          
+          <!-- Right Column: Message Content -->
+          <div class="col-12 col-md-7 principal-message-content">
+            <h2 class="principal-heading" id="principal-heading-title">PRINCIPAL'S MESSAGE</h2>
+            <div class="principal-underline"></div>
+            
+            <p class="principal-text" id="principal-message-text">
+              Sri Sivani College of Pharmacy proudly contributes to the health care system by providing fully pledged and ready pharma graduates in this remote area of Andhra Pradesh. The college is well established with laboratories and equipment. Our faculty is experienced, qualified, and competent to make and mould students with strong pharmacy basics to the expectations of the Pharma industry today. In the coming days, our college will become the hub for Pharma-outsourced research activities by students and staff in this area. The overall growth of students in terms of productivity, character, and knowledge will be the motto of our college under the dynamic leadership of all the generous, talented academicians of the Sri Sivani group of colleges.
+            </p>
+          </div>
+        </div>
+      </div>
+            <!-- Gallery Section -->
+      <div class="gallery-section mt-4" id="gallery-section">
+        <h2 class="gallery-heading" id="gallery-heading-title">GALLERY</h2>
+        <div class="gallery-underline"></div>
+        
+        <div class="row g-3 mt-2">
+          <!-- Image 1: Lab -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="gallery-item-container">
+              <img src="/assets/gallery_lab.svg" alt="Pharmacy Laboratory Class" class="gallery-img img-fluid" id="gallery-img-1">
+            </div>
+          </div>
+          <!-- Image 2: Canteen -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="gallery-item-container">
+              <img src="/assets/gallery_canteen.svg" alt="Sivani Engineering Canteen" class="gallery-img img-fluid" id="gallery-img-2">
+            </div>
+          </div>
+          <!-- Image 3: Hostel -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="gallery-item-container">
+              <img src="/assets/gallery_hostel.svg" alt="Spoorti Sadan Boys Hostel" class="gallery-img img-fluid" id="gallery-img-3">
+            </div>
+          </div>
+          <!-- Image 4: Classroom -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="gallery-item-container">
+              <img src="/assets/gallery_classroom.svg" alt="Classroom Lectures" class="gallery-img img-fluid" id="gallery-img-4">
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- Lightbox Overlay for Gallery Popups -->
+    <div class="lightbox-overlay" id="lightboxOverlay" role="dialog" aria-modal="true" aria-label="Gallery Image Preview">
+    <span class="lightbox-close" id="lightbox-close-btn">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // 2. Lightbox Popup Functionality
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const lightbox = document.getElementById('lightboxOverlay');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const closeBtn = document.getElementById('lightbox-close-btn');
+
+    if (galleryImages.length > 0 && lightbox && lightboxImg) {
+      galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightboxCaption.textContent = img.alt;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      };
+
+      closeBtn.addEventListener('click', closeLightbox);
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === closeBtn) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+    }
+  </script>
+</body>
+</html>
