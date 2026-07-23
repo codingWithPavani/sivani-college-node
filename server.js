@@ -1089,6 +1089,74 @@ app.get('/students-life/:page', (req, res) => {
 });
 
 
+const infrastructurePages = {
+  'classrooms': {
+    title: 'Classrooms',
+    content: `<h3 class="vision-heading">Under Process</h3>`
+  },
+
+  'labs': {
+    title: 'Labs',
+    content: `<h3 class="vision-heading">Under Process</h3>`
+  },
+
+  'library': {
+    title: 'Library',
+    content: `<h3 class="vision-heading">Under Process</h3>`
+  },
+
+  'seminar-hall': {
+    title: 'Seminar Hall',
+    content: `<h3 class="vision-heading">Under Process</h3>`
+  },
+
+  'central-instrumentation-lab': {
+    title: 'Central Instrumentation Lab',
+    content: `<h3 class="vision-heading">Under Process</h3>`
+  },
+
+  'machine-room': {
+    title: 'Machine Room',
+    content: `<h3 class="vision-heading">Under Process</h3>`
+  },
+
+  'museum': {
+    title: 'Museum',
+    content: `<h3 class="vision-heading">Under Process</h3>`
+  },
+
+  'medicinal-garden': {
+    title: 'Medicinal Garden',
+    content: `<h3 class="vision-heading">Under Process</h3>`
+  },
+
+  'conference-hall': {
+    title: 'Conference Hall',
+    content: `<h3 class="vision-heading">Under Process</h3>`
+  },
+
+  'facility-for-physically-challenged': {
+    title: 'Facility for Physically Challenged',
+    content: `<h3 class="vision-heading">Under Process</h3>`
+  }
+};
+
+app.get('/infrastructure/:page', (req, res) => {
+  const page = infrastructurePages[req.params.page];
+
+  if (!page) {
+    return res.status(404).send('Page not found');
+  }
+
+  res.render('about-page', {
+    pageTitle: page.title,
+    content: page.content,
+    parentLabel: 'Infrastructure',
+    parentUrl: '#'
+  });
+});
+
+
 app.listen(3000, () => {
   console.log("Server running at http://localhost:3000");
 });
