@@ -140,15 +140,71 @@ const aboutPages = {
   },
   'correspondent-message': {
     title: "Correspondent's Message",
-    content: '<p class="college-para">Add content here.</p>'
+    content: `
+      <div class="message-content-row">
+
+        <div class="message-image">
+          <img 
+            src="/assets/correspondent.jpg" 
+            alt="Correspondent"
+            class="message-person-image"
+          >
+        </div>
+
+        <div class="message-text">
+          <p class="college-para">
+            We are guided by a clear vision to build a centre of excellence in pharmacy education through quality assurance, academic integrity, and continuous institutional improvement. By adhering to accreditation frameworks, regulatory standards, and outcome-based education practices, we strive to create a dynamic learning ecosystem aligned with national priorities and global benchmarks. Our mission is to empower students with professional competence, ethical values, leadership qualities, and a passion for innovation and research, enabling them to face future healthcare challenges with confidence. We firmly believe that education should inspire purpose, nurture responsibility, and transform potential into performance. I encourage our students to dream ambitiously, uphold discipline and quality, and embrace lifelong learning as they progress toward meaningful professional achievement and service to society.
+          </p>
+        </div>
+
+      </div>
+    `
   },
   'treasurer-message': {
     title: "Treasurer's Message",
-    content: '<p class="college-para">Add content here.</p>'
+    content: `
+        <h3>Secretary’s Message</h3>
+
+    <img 
+      src="/assets/treasurer.jpg" 
+      alt="Treasurer"
+      class="message-person-image"
+    >
+
+    <p class="college-para">
+      We are dedicated to fostering an educational ecosystem that encourages excellence, innovation, and ethical responsibility in pharmacy education. By blending strong academic foundations with practical exposure and value-based learning, we aim to prepare students to meet the evolving challenges of the healthcare profession with confidence and competence. I extend my best wishes to all students as they pursue knowledge, professional growth, and meaningful service to society.
+    </p>
+
+    <p class="message-signature">
+      ----<strong><em>Sri D. Venkata Rao</em></strong>
+    </p>
+
+    <p class="message-designation">
+      <strong><em>Treasurer</em></strong>
+    </p>`
+    
   },
   'principal-message': {
     title: "Principal's Message",
-    content: '<p class="college-para">Add content here.</p>'
+    content: `
+        <h2>Principal’s Message</h2>
+
+    <img 
+      src="/assets/principal.jpg" 
+      alt="principal"
+      class="message-person-image"
+    >
+
+    <p class="college-para">
+      Sri Sivani College of Pharmacy proudly contributes to the health care system by providing fully pledged and ready pharma graduates in this remote area of Andhra Pradesh. The college is well established with laboratories, equipment and class rooms. Our faculty is experienced, qualified, and competent to make and mould students with strong pharmacy basics to the expectations of the Pharma industry today. In the coming days, our college will become the hub for Pharma-outsourced research activities by students and staff in this area. The overall growth of students in terms of productivity, character, and knowledge will be the motto of our college under the dynamic leadership of all the generous, talented academicians of the Sri Sivani Educational Society.    </p>
+
+    <p class="message-signature">
+      ----<strong><em>Dr K Rajkiran</em></strong>
+    </p>
+
+    <p class="message-designation">
+      <strong><em>Professor & Principal</em></strong>
+    </p>`
   },
   'annual-reports': {
     title: 'Annual Reports',

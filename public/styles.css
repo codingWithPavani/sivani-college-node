@@ -136,10 +136,18 @@ body {
   object-fit: contain;
   filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.15));
 }
-/* Navbar / Navigation Bar Styling */
+/* Navbar / Navigation Bar Styling */ 
+/* .custom-navbar {
+  background-color: var(--nav-bg);
+  padding: 10px 15px;
+} */
+ /* Navbar / Navigation Bar Styling */
 .custom-navbar {
   background-color: var(--nav-bg);
   padding: 10px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .nav-links-container {
   display: flex;
@@ -1101,4 +1109,25 @@ body {
 .message-designation {
     margin-left: 40px;
     font-size: 20px;
+}
+
+/* correspondent's message */
+.message-content-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+
+.message-text {
+    flex: 1;
+}
+@media (max-width: 768px) {
+    .message-content-row {
+        flex-direction: column;
+    }
+
+    .message-image {
+        flex: none;
+    }
 }
