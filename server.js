@@ -923,6 +923,89 @@ app.get('/about/:page', (req, res) => {
   });
 });
 
+
+app.get('/admissions-fee', (req, res) => {
+  res.render('about-page', {
+    pageTitle: 'Courses Offered',
+    parentLabel: 'Home',
+    parentUrl: '/',
+    content: `
+      <h3 class="section-heading-purple">COURSES OFFERED & FEE STRUCTURE</h3>
+
+      <div class="data-table-wrapper">
+        <table class="fee-table">
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Course Offered</th>
+              <th>Year Started</th>
+              <th>Duration</th>
+              <th>Current Intake</th>
+              <th>Fee Structure</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="fee-table-section-row fee-table-ug">
+              <td colspan="6">UNDER GRADUATE COURSE</td>
+            </tr>
+            <tr class="fee-table-ug-row">
+              <td>1</td>
+              <td>B. Pharm<br>(Bachelor of Pharmacy)</td>
+              <td>2007</td>
+              <td>04 Yrs.</td>
+              <td>100</td>
+              <td rowspan="1" class="fee-amount">Rs.38,000/.per year</td>
+            </tr>
+            <tr class="fee-table-section-row fee-table-pg">
+              <td colspan="6">POST GRADUATE COURSES</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>M.Pharm<br>Pharmaceutical Analysis</td>
+              <td>2011</td>
+              <td>02 Yrs.</td>
+              <td>15</td>
+              <td rowspan="3" class="fee-amount">Rs.60,000/.per year</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>M.Pharm<br>Pharmaceutics</td>
+              <td>2012</td>
+              <td>02 Yrs.</td>
+              <td>09</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>M.Pharm<br>Regulatory Affairs</td>
+              <td>2012</td>
+              <td>02 Yrs.</td>
+              <td>06</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="admission-procedure-heading">ADMISSION PROCEDURE</h3>
+
+      <h4 class="admission-course-heading">B. Pharm</h4>
+      <ul class="admission-list">
+        <li>We follow a standard admission process wherein candidates who have passed 10+2 with MPC &amp;Bi.PC as major subjects and with minimum 50% of marks are eligible to apply.</li>
+        <li>Selection will be on the basis of marks obtained in EAPCET (Engineering, Agriculture and Pharmacy Common Entrance Test).</li>
+        <li>Admission is either through EAPCET counselling or by enrollment with Sri Sivani College of Pharmacy, Srikakulam.</li>
+        <li>Lateral Entry Admissions are on the basis of ECET Counselling.</li>
+      </ul>
+
+      <h4 class="admission-course-heading">M. Pharm</h4>
+      <ul class="admission-list">
+        <li>Selection will be based on the rank obtained in GPAT(Graduate Pharmacy Aptitude Test) Examination or PGECET(Post Graduate Engineering Common Entrance Test).</li>
+        <li>Admission is either through PGECET counselling or by enrollment with Sri Sivani College of Pharmacy, Srikakulam.</li>
+        <li>We follow a standard admission process wherein candidates who have passed B. Pharm with minimum 50% of marks are eligible to apply.</li>
+      </ul>
+    `
+  });
+});
+
+
 app.listen(3000, () => {
   console.log("Server running at http://localhost:3000");
 });

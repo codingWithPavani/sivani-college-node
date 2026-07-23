@@ -1373,3 +1373,114 @@ body {
 .section-heading-blue:first-of-type {
   margin-top: 30px;
 }
+
+/* ===== Admissions & Fee Page ===== */
+.section-heading-purple {
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #7b3fa0;
+  text-align: center;
+  margin: 20px 0 25px;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+.fee-table th {
+  background-color: #a8a8a8;
+  color: #1a1a1a;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px 14px;
+  border: 1px solid #888;
+  font-size: 0.92rem;
+}
+
+.fee-table td {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+.fee-table-section-row td {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+}
+
+.fee-table-ug {
+  background-color: #2952a3;
+}
+
+.fee-table-pg {
+  background-color: #d45100;
+}
+
+.fee-table tbody tr:not(.fee-table-section-row) td:nth-child(2) {
+  text-align: left;
+  font-weight: 700;
+}
+
+.fee-table-ug-row td {
+  color: #c00000;
+  font-weight: 700;
+}
+
+.fee-amount {
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.fee-table tbody tr:not(.fee-table-ug-row):not(.fee-table-section-row) td {
+  color: #2d5a2d;
+  font-weight: 700;
+}
+
+.fee-table tbody tr:not(.fee-table-ug-row):not(.fee-table-section-row) td:nth-child(3),
+.fee-table tbody tr:not(.fee-table-ug-row):not(.fee-table-section-row) td:nth-child(4),
+.fee-table tbody tr:not(.fee-table-ug-row):not(.fee-table-section-row) td:nth-child(1) {
+  color: #333;
+  font-weight: 400;
+}
+
+.admission-procedure-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 40px 0 10px;
+}
+
+.admission-course-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d5a2d;
+  text-decoration: underline;
+  margin: 20px 0 10px;
+}
+
+.admission-list {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.admission-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 8px;
+  list-style-type: "❖  ";
+}
+
+@media (max-width: 768px) {
+  .fee-table th,
+  .fee-table td {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+}
