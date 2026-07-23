@@ -1005,6 +1005,40 @@ app.get('/admissions-fee', (req, res) => {
   });
 });
 
+const researchPages = {
+  'projects': {
+    title: 'Projects',
+    content: `
+      <h3 class="vision-heading">Under Process</h3>
+    `
+  },
+  'publications': {
+    title: 'Publications',
+    content: `
+      <h3 class="vision-heading">Under Process</h3>
+    `
+  },
+  'patents': {
+    title: 'Patents',
+    content: `
+      <h3 class="vision-heading">Under Process</h3>
+    `
+  }
+};
+
+app.get('/research/:page', (req, res) => {
+  const page = researchPages[req.params.page];
+  if (!page) {
+    return res.status(404).send('Page not found');
+  }
+  res.render('about-page', {
+    pageTitle: page.title,
+    content: page.content,
+    parentLabel: 'Research',
+    parentUrl: '#'
+  });
+});
+
 
 app.listen(3000, () => {
   console.log("Server running at http://localhost:3000");
