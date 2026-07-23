@@ -1484,3 +1484,39 @@ body {
     font-size: 0.8rem;
   }
 }
+
+/* SEDG CELL */
+.sedg-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.sedg-image-section {
+    width: 160px;
+    flex-shrink: 0;
+}
+
+.sedg-person-image {
+    width: 160px;
+    height: 208px;
+    object-fit: cover;
+    display: block;
+}
+
+.sedg-description {
+    padding-top: 175px;
+}
+
+.sedg-description p {
+    margin: 0;
+}
+
+.sedg-person-name {
+    margin-top: 45px;
+    margin-bottom: 0;
+}
+
+.sedg-department {
+    margin-top: 45px;
+}

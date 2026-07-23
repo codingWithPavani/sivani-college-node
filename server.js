@@ -1039,6 +1039,55 @@ app.get('/research/:page', (req, res) => {
   });
 });
 
+const studentsLifePages = {
+  'hostels': { title: 'Hostels', content: `<h3 class="vision-heading">Under Process</h3>` },
+  'transport': { title: 'Transport', content: `<h3 class="vision-heading">Under Process</h3>` },
+  'sports': { title: 'Sports', content: `<h3 class="vision-heading">Under Process</h3>` },
+  'gym': { title: 'Gym', content: `<h3 class="vision-heading">Under Process</h3>` },
+  'cafeteria': { title: 'Cafteria', content: `<h3 class="vision-heading">Under Process</h3>` },
+  'sgrc-committee': { title: 'SGRC Committee', content: `<h3 class="vision-heading">Under Process</h3>` },
+  'health-facilities': { title: 'Health Facilities', content: `<h3 class="vision-heading">Under Process</h3>` },
+  'anti-ragging-cell': { title: 'Anti Ragging Cell', content: `<h3 class="vision-heading">Under Process</h3>` },
+  'equal-opportunity-cell': { title: 'Equal opportunity Cell', content: `<h3 class="vision-heading">Under Process</h3>` },
+  'sedg-cell': {
+    title: 'SEDG CELL',
+    content: `
+      <div class="sedg-profile">
+
+        <div class="sedg-image-section">
+          <img 
+            src="/assets/rajesh-kumar.jpg"
+            alt="Rajesh Kumar"
+            class="sedg-person-image"
+          >
+
+          <p class="sedg-person-name">Rajesh Kumar</p>
+
+          <p class="sedg-department">Department of CSE</p>
+        </div>
+
+        <div class="sedg-description">
+          <p>dDEFGH</p>
+        </div>
+
+      </div>
+    `
+  },  'facilities-differently-abled': { title: 'Facilities for differently-abled', content: `<h3 class="vision-heading">Under Process</h3>` }
+};
+
+app.get('/students-life/:page', (req, res) => {
+  const page = studentsLifePages[req.params.page];
+  if (!page) {
+    return res.status(404).send('Page not found');
+  }
+  res.render('about-page', {
+    pageTitle: page.title,
+    content: page.content,
+    parentLabel: 'Students Life',
+    parentUrl: '#'
+  });
+});
+
 
 app.listen(3000, () => {
   console.log("Server running at http://localhost:3000");
