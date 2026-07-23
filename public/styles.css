@@ -136,11 +136,6 @@ body {
   object-fit: contain;
   filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.15));
 }
-/* Navbar / Navigation Bar Styling */ 
-/* .custom-navbar {
-  background-color: var(--nav-bg);
-  padding: 10px 15px;
-} */
  /* Navbar / Navigation Bar Styling */
 .custom-navbar {
   background-color: var(--nav-bg);
@@ -1130,4 +1125,251 @@ body {
     .message-image {
         flex: none;
     }
+}
+
+/* ===== Nested Dropdown (submenu) ===== */
+.nav-dropdown-item.has-submenu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submenu-arrow {
+  font-size: 0.7rem;
+  margin-left: 10px;
+  color: #999;
+}
+
+/* ===== Nested Dropdown (submenu) — isolated per item ===== */
+.nav-dropdown-item.has-submenu {
+  position: relative;
+}
+
+.submenu-arrow {
+  font-size: 0.7rem;
+  margin-left: 10px;
+  color: #999;
+}
+
+.nav-dropdown-item.has-submenu > .nav-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #ffffff;
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1002;
+  padding: 8px 0;
+}
+
+.nav-dropdown-item.has-submenu:hover > .nav-submenu {
+  display: block;
+}
+
+/* Mobile: stack submenu inline instead of flyout */
+@media (max-width: 768px) {
+  .nav-dropdown-item.has-submenu > .nav-submenu {
+    position: static;
+    box-shadow: none;
+    min-width: 100%;
+    padding-left: 15px;
+  }
+}
+
+
+/* ===== Third-level Nested Submenu ===== */
+.nav-submenu .nav-dropdown-item.has-submenu .nav-submenu {
+  top: 0;
+  left: 100%;
+}
+
+/* ===== PDF View/Download Card ===== */
+.pdf-card {
+  display: flex;
+  max-width: 500px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.pdf-card-label {
+  background-color: #1a2a5e;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  padding: 16px 24px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.pdf-card-view {
+  background-color: #f08080;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  padding: 16px 30px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.pdf-card-view:hover {
+  background-color: #e06666;
+  color: #ffffff;
+}
+
+/* ===== Faculty Table ===== */
+.faculty-table-wrapper {
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+.faculty-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Georgia, serif;
+  min-width: 900px;
+}
+
+.faculty-table th {
+  border: 1px solid #1a1a1a;
+  padding: 16px 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.faculty-table td {
+  border: 1px solid #1a1a1a;
+  padding: 16px 12px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0.95rem;
+}
+
+.faculty-sno {
+  background-color: #a8d5a2;
+  font-weight: 600;
+  width: 60px;
+}
+
+.faculty-photo-cell {
+  min-width: 180px;
+}
+
+.faculty-photo {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.faculty-name {
+  font-weight: 700;
+}
+
+.faculty-pci {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.faculty-highlight {
+  background-color: #a8d5a2;
+  font-weight: 700;
+}
+
+.faculty-exp {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .faculty-table th,
+  .faculty-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+  .faculty-photo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* ===== Generic Data Table (Governing Body, etc.) ===== */
+.data-table-wrapper {
+  overflow-x: auto;
+  margin-top: 25px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.data-table th {
+  background-color: #a8a8a8;
+  color: #1a1a1a;
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 16px;
+  border: 1px solid #888;
+  font-size: 0.95rem;
+}
+
+.data-table td {
+  background-color: #c9dcf0;
+  color: #1a1a1a;
+  padding: 14px 16px;
+  border: 1px solid #a8c0dc;
+  font-size: 0.95rem;
+}
+
+.data-table tr:nth-child(even) td {
+  background-color: #bdd3ec;
+}
+
+@media (max-width: 768px) {
+  .data-table th,
+  .data-table td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ===== Principal Full Page (Administration) ===== */
+.principal-photo-full {
+  width: 100%;
+  max-width: 500px;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto 30px;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.section-heading-blue {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2952a3;
+  margin: 35px 0 14px;
+}
+
+.section-heading-blue:first-of-type {
+  margin-top: 30px;
 }
